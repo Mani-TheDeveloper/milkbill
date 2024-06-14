@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>పాల నిగది</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon"
+        href="https://thumbs.dreamstime.com/b/dairy-farm-milk-food-organic-products-poster-vector-natural-pitcher-jug-glass-bottles-cottage-cheese-curd-butter-yogurt-180206730.jpg"
+        type="image/x-icon">
+</head>
+
+<body>
+    <form id="milkForm">
+        <h1>పాల నిగది</h1>
+        <h2>
+            Date : <span id="datetime"></span>
+        </h2>
+        <label for="milk">Milk Delivery Status:</label>
+        <select name="milk" id="milk" onchange="toggleElseInput()">
+            <option disabled selected>Select Any One</option>
+            <option value="Full Milk">Full Milk</option>
+            <option value="Only Cow Milk">Only Cow Milk</option>
+            <option value="Only Buffalo">Only Buffalo</option>
+            <option value="No Milk">No Milk</option>
+            <option value="Something else">Something else</option>
+        </select>
+        <input type="text" id="else" name="else" placeholder="Specify...">
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="button" onclick="viewStatement()">View Statement</button>
+            <button type="button" onclick="resetData()">Reset Data</button>
+        </div>
+    </form>
+    <div id="message"></div>
+    <script src="./JS.js"></script>
+</body>
+
+</html>
